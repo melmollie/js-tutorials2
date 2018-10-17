@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 id="demo2"></h2>
+
+<script>
+    document.getElementById("demo2").innerHTML = "My First JavaScript"
+</script>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo">Here comes the text</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+<br />
+
+<button type="button" onclick="document.getElementById('demo').style.fontSize='30px'">Big</button>
+<button type="button" onclick="document.getElementById('demo').style.fontSize='1em'">Small</button>
+
+<br />
+<button type="button" onclick="document.getElementById('demo').style.color='red'">Red</button>
+<button type="button" onclick="document.getElementById('demo').style.color='green'">Green</button>
+<button type="button" onclick="document.getElementById('demo').style.color='blue'">Blue</button>
+<button type="button" onclick="document.getElementById('demo').style.color='black'">Black</button>
+
+<br /> 
+<br /> 
+
+<button type="button" onclick="document.getElementById('demo').style.display='none'">Hide</button>
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Show</button>
+
+<br /> 
+<br /> 
+
+<button type="button" onclick="document.getElementById('image').src='annie-spratt-66164-unsplash.jpg'">Leaves</button>
+<button type="button" onclick="document.getElementById('image').src='jason-wu-1080942-unsplash.jpg'">Jellyfish</button>
+<button type="button" onclick="document.getElementById('image').src='juskteez-vu-1041-unsplash.jpg'">Starry Sky</button>
+<br /> 
+<br />
+<img src="annie-spratt-66164-unsplash.jpg" alt="changeimg" id="image" style="width:200px">
+
+</body>
+</html> 
