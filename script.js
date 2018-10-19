@@ -70,3 +70,43 @@ document.getElementById("ihminen").innerHTML = person.firstName + " is " + perso
 document.getElementById("ihminen2").innerHTML = person.firstName + " has " + person.eyeColor + " eyes."; 
 
 document.getElementById("ihminen3").innerHTML = person.lastName + " is her lastname."; 
+
+function todaysDate() {
+    document.getElementById("date").innerHTML = Date();
+}
+
+let someText = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ";
+
+document.getElementById("demo9").innerHTML = someText.length;
+
+let callOne = true;
+
+function lifeIsGood() {
+    let str = document.getElementById("replace").innerHTML;
+    let txt = str.replace("awful", "awesome");
+    document.getElementById("replace").innerHTML = txt;
+}
+
+function lifeIsBad() {
+    let str = document.getElementById("replace").innerHTML;
+    let txt = str.replace("awesome", "awful");
+    document.getElementById("replace").innerHTML = txt;
+}
+
+function call() {
+    if (callOne) lifeIsGood();
+    else lifeIsBad();
+    callOne = !callOne; 
+}
+
+let fruits, text, fLen, i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
+
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+    text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("list").innerHTML = text;
