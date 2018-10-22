@@ -109,4 +109,44 @@ for (i = 0; i < fLen; i++) {
 }
 text += "</ul>";
 
+function aakkos() {
+    fruits.sort();
+    let text, fLen, i;
+    fLen = fruits.length;
+
+    text = "<ul>"
+    for (i = 0; i < fLen; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+    }
+    text += "</ul>";
+    document.getElementById("list").innerHTML = text;
+}
+
 document.getElementById("list").innerHTML = text;
+
+
+
+document.getElementById("tostring").innerHTML = fruits.join(" &Otimes; ");
+
+
+let coffee = ["Coffee"];
+document.getElementById("coffee").innerHTML = coffee;
+
+
+function sugar() {
+    coffee.push("Sugar");
+    document.getElementById("coffee").innerHTML = coffee;
+}
+
+function milk() {
+    coffee.push("Milk");
+    document.getElementById("coffee").innerHTML = coffee;
+}
+
+let points = [40, 100, 1, 3, 5, 25, 10, 17, 89, 76];
+document.getElementById("randomarray").innerHTML = points; 
+
+function random() {
+    points.sort(function(a, b){return 0.5 - Math.random()});
+    document.getElementById("randomarray").innerHTML = points;
+}
