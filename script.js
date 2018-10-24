@@ -71,8 +71,10 @@ document.getElementById("ihminen2").innerHTML = person.firstName + " has " + per
 
 document.getElementById("ihminen3").innerHTML = person.lastName + " is her lastname."; 
 
+let d = new Date();
+
 function todaysDate() {
-    document.getElementById("date").innerHTML = Date();
+    document.getElementById("date").innerHTML = d.toDateString();
 }
 
 let someText = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ";
@@ -149,4 +151,12 @@ document.getElementById("randomarray").innerHTML = points;
 function random() {
     points.sort(function(a, b){return 0.5 - Math.random()});
     document.getElementById("randomarray").innerHTML = points;
+}
+
+function pie() {
+    document.getElementById("pie").innerHTML = Math.PI + " ...Sorry, I meant PI.";
+}
+
+function randomNumber() {
+    document.getElementById("randomnumber").innerHTML = Math.floor(Math.random() * 11);
 }
