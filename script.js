@@ -1,4 +1,45 @@
+window.onload = timeOfTheDay();
+function timeOfTheDay() {
+    let greeting;
+    let time = new Date().getHours();
+    if (time < 11 && time > 4) {
+        greeting = "Good morning";
+    } else if (time < 18) {
+        greeting = "Good day";
+    } else if (time < 22){
+        greeting = "Good evening";
+    } else {
+        greeting = "Good night";
+    }
+    document.getElementById("goodmorning").innerHTML = greeting + " to you!";
+}
 
+let day;
+switch (new Date().getDay()) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case 6:
+        day = "Saturday";
+        break;
+}
+
+document.getElementById("day").innerHTML = "Today is " + day;
 
 function myFunction() {
     document.getElementById("demo").innerHTML = "Paragraph has changed.";
@@ -157,6 +198,17 @@ function pie() {
     document.getElementById("pie").innerHTML = Math.PI + " ...Sorry, I meant PI.";
 }
 
-function randomNumber() {
-    document.getElementById("randomnumber").innerHTML = Math.floor(Math.random() * 11);
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function ageFunction() {
+    let age, drinkable;
+    age = Number(document.getElementById("age").value);
+    if (isNaN(age)) {
+        drinkable = "Input is not a number"; 
+    } else {
+        drinkable = (age < 18) ? "Let's have tome tea." : "Let's get some beer!";
+     }
+     document.getElementById("ageresult").innerHTML = drinkable;
 }

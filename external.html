@@ -10,6 +10,8 @@
         
 
     <h2>JavaScript in the External File</h2>
+    <p id="day"></p>
+    <p id="goodmorning" ></p>
 
     <p id="demo">A Paragraph.</p>
 
@@ -95,16 +97,24 @@
 
     <button onclick="pie()">Get some pie!</button>
     <br />
-    <p id="pie"></p>
+    <p id="pie">&Tab;</p>
  
- 
-    <br />
     <br />
 
 
-    <button onclick="randomNumber()">Guess what number I'm thinking?</button>
+    <button onclick="document.getElementById('randomnumber').innerHTML = randomNumber(0,10)">Guess what number I'm thinking? (0-10)</button>
     <br />
     <p id="randomnumber"></p>
+
+    <br />
+    <br /> 
+
+    <p>How old are you?</p>
+    <input id="age"  />
+
+    <button onclick="ageFunction()">Send</button>
+
+    <p id="ageresult"></p>
 
     <script src="script.js"></script>
 
